@@ -5,7 +5,9 @@
    required, it is highly recommended. A <uniqueKey> is present in almost all Solr
    installations. See the <uniqueKey> declaration below where <uniqueKey> is set to "id".
  -->
-    <field name="collectionID" type="int" indexed="true" stored="true" required="true" multiValued="false" />
+ 
+ 	<field name="collectionID" type="text_general" indexed="true" stored="true" required="true" multiValued="false" />
+    <field name="collectionIDNumeric" type="int" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="collectionNumber" type="text_general" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="collectionNumberNumeric" type="int" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="resourceID" type="int" indexed="true" stored="true" required="true" multiValued="false" />
@@ -30,6 +32,7 @@
         is added to the index.  It's used either to index the same field differently,
         or to add multiple fields to the same field for easier/faster searching.  -->
 
+    <copyField source="collectionID" dest="text"/>
     <copyField source="collectionNumber" dest="text"/>
     <copyField source="entryID" dest="text"/>
     <copyField source="fileName" dest="text"/>

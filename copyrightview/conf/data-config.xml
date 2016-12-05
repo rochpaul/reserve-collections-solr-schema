@@ -33,6 +33,7 @@
             <field column="fulltexturl" name="url" />
             <field column="reviewstatus" name="reviewStatus" />
             <field column="collectionid" name="collectionID" />
+            <field column="collectionid" name="collectionIDNumeric" />
             <field column="collectionnumber" name="collectionNumber" />
             <field column="collectionnumber" name="collectionNumberNumeric" />
             <field column="collectiontitle" name="collectionTitle" />
